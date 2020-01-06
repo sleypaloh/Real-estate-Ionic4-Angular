@@ -1,0 +1,42 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.viewpost {
+
+  ion-grid {
+    height: 100%;
+    padding: 0;
+    margin:0;
+  }
+  ion-row {
+    height: 100%;
+  }
+  ion-col {
+    height: 100%;
+    padding: 0;
+    margin:0;
+  }
+  .center {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  ion-list{
+    background: #efefef;
+    padding:0;
+  }
+  ion-card{
+    background: #fff;
+    padding:0;
+  }
+
+  ion-img {
+    object-fit: resize;
+    /*height: 150px;*/
+    width: 100% !important;
+    border: 0;
+    padding: 0;
+    
+  }
+}

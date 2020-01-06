@@ -1,0 +1,8 @@
+{
+  "appId": "io.starter",
+  "appName": "ion-estates",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

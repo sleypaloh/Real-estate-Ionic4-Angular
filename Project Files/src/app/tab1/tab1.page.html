@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+      <ion-icon name="more" slot="icon-only"></ion-icon> 
+    </ion-button>
+    </ion-buttons> 
+    <ion-title>
+      <ion-title>Properties</ion-title>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <p *ngIf = " useid ">
+        <ion-button (click) = "logout()">
+           Logout
+        </ion-button>
+      </p>
+      <p *ngIf = " !useid ">
+        <ion-button (click) = "login()">
+          <ion-icon name="person-add" slot="icon-only"></ion-icon>
+        </ion-button>
+      </p>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-grid>
+     <ion-row >
+         <ion-col>
+          <ion-item *ngFor="let estate of estates" [routerLink]="['/tabs/tab1', estate.id]">
+            <ion-thumbnail slot="start">
+              <ion-img [src]="estate?.image"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              <h3>{{ estate.title }}</h3>
+              <p><ion-icon name="pin"></ion-icon> {{ estate.location }}</p>
+              <h2 style="color:red;font-weight:bold"> From KES: {{ estate.price }} </h2>
+            </ion-label>
+            <ion-button slot="end" size="small" fill="clear" style="border:1px solid #efefef;border-radius:10px">{{ estate.type }}</ion-button>
+          </ion-item>
+         </ion-col>
+     </ion-row>
+   </ion-grid>
+</ion-content>

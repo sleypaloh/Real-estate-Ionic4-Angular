@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>{{ estate.title }}</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+	<ion-grid no-padding *ngFor = "let estate of estates">
+		<ion-row>
+			<ion-col no-padding>
+				<ion-img [src]="estate.image"></ion-img>
+			</ion-col>
+		</ion-row>
+		<ion-row padding style="border:2px solid #efefef;box-shadow: 5px 10px 18px #888888:">
+			<ion-col>
+				<h2 text-center><b>{{ estate.title }}</b></h2>
+                <p style="color:red">{{ estate.price }}</p>
+                <p><ion-icon name="pin"></ion-icon> {{ estate.location }}</p>
+                <p>Category: <b>{{ estate.category }}</b></p>
+
+                <h5><b>Description</b></h5>
+                <p>{{ estate.descs }}</p>
+<!-- 
+				<ion-list no-padding>
+					<h5><b>Some of the amenities include;</b></h5>
+					<ion-item *ngFor='let ig of loadedRecipe.ingredients'>
+						{{ ig }}
+					</ion-item>
+				</ion-list> -->
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+	    <ion-fab-button>
+	      <ion-icon name="call"></ion-icon>
+	    </ion-fab-button>
+	  </ion-fab>
+
+</ion-content>

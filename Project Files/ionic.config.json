@@ -1,0 +1,7 @@
+{
+  "name": "ion-estates",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

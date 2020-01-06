@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-title>My List</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row >
+        <ion-col>
+  <ion-list>
+    <ion-item-sliding *ngFor="let estate of estates">
+      <ion-item-options side="start">
+        <ion-item-option color="danger" (click)="deletepro(estate.id)">Delete</ion-item-option>
+      </ion-item-options>
+  
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="estate?.image"></ion-img>
+        </ion-thumbnail>
+        <ion-label>{{estate?.title}}</ion-label>
+      </ion-item>
+  
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Update</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+   <!-- <ion-grid>
+     <ion-row >
+         <ion-col>
+           <ion-card ngFor=" let post of (userPosts | async)?.posts ">
+              <ion-card-content>
+                <ion-item>
+                </ion-item>
+                <ion-item>
+                  <h3>{{ post.title }}</h3>
+                  <p><ion-icon name="pin"></ion-icon> {{ post.location }}</p>
+                  <h2 style="color:red;font-weight:bold"> {{ post.price }} </h2>
+                  <ion-button slot="end" size="small" fill="clear" style="border:1px solid #efefef;border-radius:10px">{{ post.type }}</ion-button>
+                </ion-item>
+              </ion-card-content>
+           </ion-card>
+         </ion-col>
+     </ion-row>
+   </ion-grid> -->
+</ion-content>

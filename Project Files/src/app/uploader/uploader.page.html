@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Upload Property</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br />
+  <!-- <ion-item style="display: none;">
+    <ion-label>Photo</ion-label>
+    <ion-input type="file" value = "http://kygc.org/server_api/images/home.png" [(ngModel)]="image"></ion-input>
+  </ion-item> -->
+  <ion-item>
+    <ion-label position="floating">Property Name</ion-label>
+    <ion-input type="text" [(ngModel)]="title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Location</ion-label>
+    <ion-input type="text" [(ngModel)]="location"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Price</ion-label>
+    <ion-input type="text" [(ngModel)]="price"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Category</ion-label>
+    <ion-select placeholder="Select Category" [(ngModel)]="category">
+      <ion-select-option value="Apartment">Apartment</ion-select-option>
+      <ion-select-option value="Flat">Flat</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Type</ion-label>
+    <ion-select placeholder="Select Category" [(ngModel)]="type">
+      <ion-select-option value="For_Sale">For Sale</ion-select-option>
+      <ion-select-option value="To_rent">To Rent</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea type="text" [(ngModel)]="desc"></ion-textarea>
+  </ion-item>
+  <ion-button expand="block" color="tertiary" padding (click) = "createPost()" fill="outline">Submit</ion-button>
+</ion-content>
